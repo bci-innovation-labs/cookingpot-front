@@ -6,6 +6,7 @@ import DashboardContainer from "./DashboardContainer";
 import RegisterContainer from "./RegisterContainer";
 import TopMenuContainer from "./TopMenuContainer";
 import FoodSearchContainer from "./FoodSearchContainer";
+import RegisterSuccessContainer from "./RegisterSuccessContainer.js"
 
 class AppContainer extends Component {
   render() {
@@ -16,6 +17,7 @@ class AppContainer extends Component {
            <Route path="/register" exact component={RegisterContainer} />
            <Route path="/topmenu" exact component={TopMenuContainer} />
            <Route path="/food-search" exact component={FoodSearchContainer} />
+            <Route path="/registersuccess" exact component={RegisterSuccessContainer} />
        </Router>
     );
   }
