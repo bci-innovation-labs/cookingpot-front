@@ -17,22 +17,7 @@ class LoginContainer extends Component {
     }
 
 
-// i will create axios userProfile api here.
-
-
-
-
-
-
-
-
-
-
     onClick() {
-        // This is a simple example of how authentication
-        // would work. You will need to write an API
-        // web-service and replace this code with making
-        // API calls and validating.
         if (this.state.email === "asdasd@123.com") {
             if (this.state.password === "123123") {
               localStorage.setItem("userEmail", this.state.email);

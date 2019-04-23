@@ -6,11 +6,13 @@ import DashboardContainer from "./DashboardContainer";
 import RegisterContainer from "./RegisterContainer";
 import TopMenuContainer from "./TopMenuContainer";
 import FoodSearchContainer from "./FoodSearchContainer";
+import SideBarCollapse from "./SideBarCollapse"
 
 class AppContainer extends Component {
   render() {
     return (
        <Router>
+       <SideBarCollapse></SideBarCollapse>
            <Route path="/" exact component={LoginContainer} />
            <Route path="/dashboard" exact component={DashboardContainer} />
            <Route path="/register" exact component={RegisterContainer} />
