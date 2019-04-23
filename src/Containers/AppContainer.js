@@ -18,6 +18,7 @@ class AppContainer extends Component {
            <Route path="/register" exact component={RegisterContainer} />
            <Route path="/topmenu" exact component={TopMenuContainer} />
            <Route path="/food-search" exact component={FoodSearchContainer} />
+            <Route path="/registersuccess" exact component={RegisterSuccessContainer} />
        </Router>
     );
   }

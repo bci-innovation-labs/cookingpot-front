@@ -1,87 +1,40 @@
 import React, { Component } from 'react';
-
-import FoodSearchComponent from '../Components/FoodSearchComponent';
-
-
-// SIMULATED DATA, YOU ARE SUPPOSED TO WRITE AN API ENDPOINT
-// AND FETCH THE DATA FROM THIS API ENDPOINT. FOR NOW HERE
-// IS THE SAMPLE DATA.
-const SIMULATED_DATA = {
-    count: 5,
-    next: null,
-    previous: null,
-    results: [
-        {
-            name: 'Suancaiyu',
-            id: 1
-        }, {
-            name: 'Yuxiangrousi',
-            id: 2
-        }, {
-            name: 'Hongshaorou',
-            id: 3
-        }, {
-            name: 'Gongbaojiding',
-            id: 4
-        }, {
-            name: 'Kaoya',
-            id: 5
-        }
-    ]
-}
-
-class FoodSearchContainer extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            data: SIMULATED_DATA.results,
-            keyword: '',
-        }
-        this.onChange = this.onChange.bind(this);
-        this.onSearchClick = this.onSearchClick.bind(this);
-    }
-
-    onChange(event) {
-        this.setState({
-            [event.target.name]: event.target.value,
-        })
-    }
-
-    onSearchClick(e) {
-        const { keyword, data } = this.state;
-
-        function filter(keyword, data) {
-            let filteredData = []
-            for (let i = 0; i < data.length; i++) {
-                let row = data[i];
-                let isFound = row.name.includes(keyword);
-                console.log(keyword, row.name, isFound);
-
-                if (isFound) {
-                    filteredData.push(row);
-                }
-            }
-            return filteredData
-        }
-
-        const filteredData = filter(keyword, data)
-        this.setState({
-            data: filteredData
-        })
-    }
-
-    render() {
-        return (
-            <FoodSearchComponent
-               data={this.state.data}
-               onSearchClick={this.onSearchClick}
-               onChange={this.onChange}
-               keyword={this.state.keyword}
-            />
-        );
-    }
-
+let user1 =
+  {
+    id:1,
+    name:"hotpot",
+    picturl:"https://www.google.ca/search?q=hotpot&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjUjrukgsThAhVp6YMKHdHxDZgQ_AUIDygC&biw=1920&bih=963#imgrc=W-pog86d9F0IqM:"
+  }
+let user2 =
+{
+  id:2,
+  name:"dumplings",
+  picturl:"https://www.google.com/search?q=dumplings&rlz=1C1AZAA_enCA743CA769&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjDnsbe5uThAhUDjq0KHYSMD4YQ_AUIDigB&biw=1920&bih=920#imgrc=Nm2_3y-w9bVStM:"
 
 }
-
-export default FoodSearchContainer;
+let user3 =
+{
+  id:3,
+  name:"hamburger",
+  picturl:"https://www.google.com/search?q=hamburgers&rlz=1C1AZAA_enCA743CA769&source=lnms&tbm=isch&sa=X&ved=0ahUKEwirhZji5-ThAhUQUK0KHTRQDaUQ_AUIDigB&biw=1920&bih=920#imgrc=vC0BnRsRcDrXmM:"
+}
+class App extends Component {
+  render() {
+    return(
+     <div className="App">
+      <h1>Cooking Pot</h1>
+      <div>
+          <p>Hello food</p>
+          <button> Wow </button>
+          <p>{user1.name}</p>
+          <img src={user1.picturl} alt={user1.name} />
+          <p>{user2.name}</p>
+          <img src={user2.picturl} alt={user2.name} />
+          <p>{user3.name}</p>
+          <img src={user3.picturl} alt={user3.name} />
+      </div>
+      </div>
+    );
+  }
+};
+export default App;
