@@ -6,7 +6,8 @@ import DashboardContainer from "./DashboardContainer";
 import RegisterContainer from "./RegisterContainer";
 import TopMenuContainer from "./TopMenuContainer";
 import FoodSearchContainer from "./FoodSearchContainer";
-import SideBarCollapse from "./SideBarCollapse"
+import SideBarCollapse from "./SideBarCollapse";
+import RegisterSuccessContainer from "./RegisterSuccessContainer"
 
 class AppContainer extends Component {
   render() {
