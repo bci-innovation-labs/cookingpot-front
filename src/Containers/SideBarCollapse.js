@@ -4,171 +4,10 @@ import { Scrollbars } from 'react-custom-scrollbars';
 
 const menuData = [
     {
-        title: "Login Page",
-        url: "/LoginPage"
-    },
-    {
-        title: "Reset Page",
-        url: "/ResetPage"
-    },
-    {
-        title: "Register Page",
-        url: "",
-        children:[
-            {
-                title: "Register Form",
-                url: "/RegisterPage"
-            },
-            {
-                title: "Success Page",
-                url: "/SuccessPage"
-            },            
-        ]
-    },
-    {
-        title: "Top Menu",
-        url: "/TopMenu"
-    },
-    {
         title: "Dashboard",
-        url: "/Dashboard"
-    },
-    {
-        title: "Widget",
-        url: "/Widgets"
-    },
-    {
-        title: "Not Found 404",
-        url: "/NotFound404"
-    },
-    {
-        title: "Server Error 500",
-        url: "/ServerError500"
-    },
-    {
-        title: "Icons",
-        url: "/Icons"
-    },
-    {
-        title: "Buttons",
-        url: "/Buttons"
-    },
-    {
-        title: "Cards",
-        url: "/Cards"
-    },
-    {
-        title: "Tables",
-        url: "",
-        children:[
-            {
-                title: "Table 1",
-                url: "/Table1"
-            },
-            {
-                title: "Table 2",
-                url: "/Table2"
-            },            
-        ]
-    },
-    {
-        title: "Forms",
-        url: "",
-        children:[
-            {
-                title: "Form Elements",
-                url: "/FormElements"
-            },
-            {
-                title: "Form Validations",
-                url: "/FormValidations"
-            },            
-        ]
-    },
-    {
-        title: "List Page",
-        url: "/ListPage"
-    },
-    {
-        title: "Details Page",
-        url: "",
-        children:[
-            {
-                title: "Detail 1",
-                url: "/DetailsPage1"
-            },
-            {
-                title: "Detail 2",
-                url: "/DetailsPage2"
-            },            
-        ]
-    },
-    {
-        title: "Pages",
-        url: "",
-        children:[
-            {
-                title: "Comments Page",
-                url: "/CommentsPage"
-            },
-            {
-                title: "Search Page",
-                url: "/SearchPage"
-            },     
-            {
-                title: "Invoice",
-                url: "/Invoice"
-            },
-            {
-                title: "File Upload",
-                url: "/FileUpload"
-            },         
-        ]
-    },
-    {
-        title: "Wizards",
-        url: "",
-        children:[
-            {
-                title: "Steps",
-                url: "",
-                children:[
-                    {
-                        title: "Step 1",
-                        url: "/Step1"
-                    },
-                    {
-                        title: "Step 2",
-                        url: "/Step2"
-                    },  
-                    {
-                        title: "Step 3",
-                        url: "/Step3"
-                    }, 
-                    {
-                        title: "Step 4",
-                        url: "/Step4"
-                    }, 
-                    {
-                        title: "Step 5",
-                        url: "/Step5"
-                    },           
-                ]
-            },
-            {
-                title: "Panel",
-                url: "/Panel"
-            },            
-        ]
-    },
-    {
-        title: "Google Maps",
-        url: "/GoogleMaps"
-    },
-    {
-        title: "Charting",
-        url: "/Charting"
+        url: "/dashboard"
     }
+
   ]
 
 class ItemNode extends React.Component {
@@ -209,7 +48,7 @@ class ItemNode extends React.Component {
                 <li className="nav-item">
                     <NavLink className="nav-link" to={ url } onClick = { sideMenuToggle }>{ title }</NavLink>
                 </li>)
-            
+
         }
     }
 }
@@ -234,51 +73,23 @@ class SideBarCollapse extends React.Component {
     return (
     <div>
         <header className="top-navbar navbar navbar-dark fixed-top bg-dark justify-content-between">
-            <Link className="navbar-brand" to="#">Over55</Link>
-            <ul className="navbar-nav mr-auto flex-row">
-                <li className="nav-item">
-                    <Link className="nav-link" to="#">
-                        <i className="far fa-user"></i>
-                    </Link>
-                </li>
-                <li className="nav-item">
-                    <Link title="Lock screen" className="nav-link" to="#">
-                        <i className="fas fa-lock"></i>
-                    </Link>
-                </li>
-                <li className="nav-item">
-                    <Link className="nav-link" to="#">
-                        <i className="fa fa-inbox"></i>
-                    </Link>
-                </li>
-                <li className="dropdown-list dropdown nav-item">
-                    <Link aria-haspopup="true" to="#" className="dropdown-toggle-nocaret nav-link" aria-expanded="false">
-                        <i className="fa fa-bell"></i>
-                        <span className="badge badge-danger">11</span>
-                    </Link>
-                </li>
-            </ul>
+            <Link className="navbar-brand" to="#">Cooking Pot</Link>
+
+
             <ul className="navbar-nav flex-row">
+
                 <li className="nav-item">
-                    <form className="form-inline search-form ml-0 my-2 my-lg-0">
-                        <input className="form-control search-box mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button className="nav-link search-button" type="button">
-                            <i className="fas fa-search"></i>
-                        </button>
-                    </form>
-                </li>
-                <li className="nav-item">
-                <button className={`navbar-toggler ${ this.state.active ? "active" : ""}` } type="button" id="sidebarCollapse" 
+                <button className={`navbar-toggler ${ this.state.active ? "active" : ""}` } type="button" id="sidebarCollapse"
                     onClick = { this.sideMenuToggle }>
                     <i className="fa fa-bars"></i>
                 </button>
-                </li>                
+                </li>
             </ul>
-            
+
         </header>
         <nav id="sidebar" className={ `${ this.state.active ? "active" : ""}` }>
-            <div className="sideMenuTouchGlass" 
-                onClick={ this.sideMenuToggle } 
+            <div className="sideMenuTouchGlass"
+                onClick={ this.sideMenuToggle }
                 style={{ display: this.state.active ? "block" : "none"}}></div>
             <Scrollbars>
                 <p className="text-center text-light mt-3 mb-2">Hi, Rodolfo</p>
@@ -288,7 +99,7 @@ class SideBarCollapse extends React.Component {
                     </ul>
                 </Scrollbars>
         </nav>
-    </div>            
+    </div>
     )
   }
 }
@@ -331,7 +142,7 @@ export default SideBarCollapse
     </li>
     <li className="nav-item">
         <NavLink className="nav-link" to="/Icons">Icons</NavLink>
-    </li>                
+    </li>
     <li className="nav-item">
         <NavLink className="nav-link" to="/Buttons">Buttons</NavLink>
     </li>
