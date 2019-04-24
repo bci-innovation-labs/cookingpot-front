@@ -18,9 +18,19 @@ class LoginContainer extends Component {
 
 
     onClick() {
+
         if (this.state.email === "asdasd@123.com") {
             if (this.state.password === "123123") {
-              localStorage.setItem("userEmail", this.state.email);
+              const userProfile = {
+                firstName:"mike",
+                lastName:"Zhou",
+                email:"asdasd@123.com",
+                password:"123123"
+
+              }
+
+
+              localStorage.setItem("user", JSON.stringify(userProfile));
                 this.setState({
                     loginStatus: true
                 })

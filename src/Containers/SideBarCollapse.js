@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, NavLink } from "react-router-dom";
 import { Scrollbars } from 'react-custom-scrollbars';
 
-const menuData = [
+const authMenuData = [
     {
         title: "Dashboard",
         url: "/dashboard"
@@ -12,6 +12,16 @@ const menuData = [
     },
 
   ]
+  const anonMenuData = [
+      {
+          title: "Login",
+          url: "/login"
+      },{
+          title:"Register",
+          url:"/register"
+      },
+
+    ]
 
 class ItemNode extends React.Component {
     constructor(props)
@@ -73,6 +83,17 @@ class SideBarCollapse extends React.Component {
     }
 
   render() {
+    let menuData;
+
+    let userProfileString = localStorage.getItem('user');
+    let userProfileDictionary = JSON.parse(userProfileString);
+    if (userProfileString === null || userProfileDictionary === undefined){
+      menuData = anonMenuData;
+    }else{
+      menuData = authMenuData;
+    }
+
+
     return (
     <div>
         <header className="top-navbar navbar navbar-dark fixed-top bg-dark justify-content-between">
