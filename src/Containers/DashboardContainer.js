@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-
+import { getFoodRecipies } from "../API/FoodRecipeAPI";
 
 import Dashboard from "../Components/Dashboard";
 
@@ -11,13 +11,11 @@ class DashboardContainer extends Component {
         const userProfileString = localStorage.getItem('user');
         const userProfileDictionary = JSON.parse(userProfileString);
 
-
-
-
         this.state={
             userEmail: localStorage.getItem("userEmail"),
             userName:localStorage.getItem("userName"),
-            menuStatus:false
+            menuStatus:false,
+            foodRecipesData:[]
         }
         this.onMenuClick=this.onMenuClick.bind(this);
     }
@@ -29,6 +27,23 @@ class DashboardContainer extends Component {
       })
 
     }
+
+    componentDidMount(){
+        getFoodRecipies(
+          null,
+          {},
+          (data) =>{
+            console.log(data)
+            this.setState({
+              foodRecipesData:data
+            })
+          },
+          (error)=>{
+
+          }
+        )
+    }
+
     render() {
         if (this.state.menuStatus) {
             return <Redirect to='/topmenu' />
@@ -38,6 +53,7 @@ class DashboardContainer extends Component {
             <Dashboard
             state={this.state}
             onMenuClick={this.onMenuClick}
+            data={this.state.foodRecipesData}
              />
         )
     }

@@ -84,14 +84,18 @@ class SideBarCollapse extends React.Component {
 
   render() {
     let menuData;
+    let menuTitle;
 
     let userProfileString = localStorage.getItem('user');
     let userProfileDictionary = JSON.parse(userProfileString);
     if (userProfileString === null || userProfileDictionary === undefined){
       menuData = anonMenuData;
+      menuTitle = "Cooking Pot";
     }else{
       menuData = authMenuData;
+      menuTitle = "Hi, " + userProfileDictionary.firstName;
     }
+
 
 
     return (
@@ -116,7 +120,7 @@ class SideBarCollapse extends React.Component {
                 onClick={ this.sideMenuToggle }
                 style={{ display: this.state.active ? "block" : "none"}}></div>
             <Scrollbars>
-                <p className="text-center text-light mt-3 mb-2">Hi, Rodolfo</p>
+                <p className="text-center text-light mt-3 mb-2">{menuTitle}</p>
                     <hr className="nav-divider" />
                     <ul className="nav flex-column">
                         { menuData.map((item, index)=>(<ItemNode menuData={item} key={index} sideMenuToggle={this.sideMenuToggle}></ItemNode>)) }

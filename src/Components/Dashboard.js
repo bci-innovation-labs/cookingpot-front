@@ -2,13 +2,35 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 
+class FoodRecipeRows extends Component{
+  render(){
+    const { onMenuClick, data } = this.props;
+      let elements = [];
+      for(let i = 0; i< data.length; i++){
+        let row = data[i];
+        elements.push(
+          <tr key={row.id}>
+              <td>
+                  <img src={row.pictureURL} alt={row.name} height="42" width="42" />
+              </td>
+              <td>{row.name}</td>
+              <td>{row.shortDescription}</td>
+              <td>{row.score}/5</td>
+              <td>view <i className="fa fa-chevron-right color-blue"></i></td>
+          </tr>
+        )
+      }
+  return elements;
+  }
+}
+
 class Dashboard extends Component {
     constructor(props) {
         super(props)
         this.state= this.props.state;
     }
     render() {
-      const { onMenuClick } = this.props;
+      const { onMenuClick, data } = this.props;
         return (
           <div className="container-fluid">
               <div className="d-flex align-items-stretch">
@@ -20,6 +42,7 @@ class Dashboard extends Component {
                               <table className="table table-striped">
                                   <thead>
                                   <tr>
+                                      <th></th>
                                       <th>Name</th>
                                       <th>Description</th>
                                       <th>Score</th>
@@ -27,13 +50,7 @@ class Dashboard extends Component {
                                   </tr>
                                   </thead>
                                   <tbody>
-                                  <tr>
-                                      <td>Hamberger</td>
-                                      <td>hahaha</td>
-                                      <td>5/5</td>
-                                      <td>view <i className="fa fa-chevron-right color-blue"></i></td>
-                                  </tr>
-                                
+                                      <FoodRecipeRows data={data} />
                                   </tbody>
                               </table>
                           </div>
