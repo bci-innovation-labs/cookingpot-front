@@ -7,7 +7,7 @@ class ContactUsComponent extends Component{
         <div className="container-fluid">
             <div className="d-flex align-items-stretch">
                 <main id="main" role="main">
-                    <h1>TODO: ROBERT</h1>
+                    <h1>TODO: HARDY</h1>
                 </main>
             </div>
         </div>

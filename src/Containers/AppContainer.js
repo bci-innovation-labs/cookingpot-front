@@ -19,6 +19,7 @@ class AppContainer extends Component {
        <Router>
        <SideBarCollapse></SideBarCollapse>
            <Route path="/" exact component={LoginContainer} />
+           <Route path="/login" exact component={LoginContainer} />
            <Route path="/dashboard" exact component={DashboardContainer} />
            <Route path="/register" exact component={RegisterContainer} />
            <Route path="/about" exact component={AboutUsContainer} />
