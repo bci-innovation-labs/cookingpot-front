@@ -22,6 +22,12 @@ const authMenuData = [
       },{
           title:"Register",
           url:"/register"
+      },{
+          title:"About Us",
+          url:"/about"
+      },{
+          title:"Contact Us",
+          url:"/contact"
       },
 
     ]
