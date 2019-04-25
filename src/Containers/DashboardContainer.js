@@ -39,7 +39,6 @@ class DashboardContainer extends Component {
             })
           },
           (error)=>{
-
           }
         )
     }
