@@ -30,7 +30,7 @@ export const SAMPLE_DATA = [
     }
 ];
 
-const menu_food_data=[
+export const menu_food_data=[
   {
     id:1,
     name:"酸菜鱼",
@@ -69,7 +69,7 @@ const menu_food_data=[
   },
 ]
 
-const teach_food_data = [
+export const teach_food_data = [
   {
     id:1,
     name:"酸菜鱼",

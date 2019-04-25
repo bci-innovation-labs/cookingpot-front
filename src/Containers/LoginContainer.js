@@ -19,7 +19,7 @@ class LoginContainer extends Component {
 
     onClick() {
 
-        if (this.state.email === "asdasd@123.com") {
+        if (this.state.email === "mike@mike.com") {
             if (this.state.password === "123123") {
               const userProfile = {
                 firstName:"mike",

@@ -19,7 +19,7 @@ class Login extends Component {
                     */}
                       <div className="row">
                           <div className="col-sm-12 text-center">
-                          <img className="img-fluid" src="./assets/img/over55-logo-600px.png" alt="Logo" width="180px" /></div>
+                          <img className="img-fluid" src="./assets/img/cookingpot_logo.jpg" alt="Logo" width="180px" /></div>
                       </div>
                       <div className="row">
                           <div className="col-sm-6 mx-auto">
@@ -46,7 +46,7 @@ class Login extends Component {
                                   <div className="input-group input-group-lg">
                                       <div className="input-group-prepend">
                                           <span className="input-group-text input-group-addon-p"><i className="fa fa-key color-blue"></i></span>
-                                      </div>                                
+                                      </div>
                                           <input
                                               id="password"
                                               name="password"
