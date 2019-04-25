@@ -30,46 +30,53 @@ export const SAMPLE_DATA = [
     }
 ];
 
-export const menu_food_data=[
+export const MENU_FOOD_DATA=[
   {
     id:1,
     name:"酸菜鱼",
     shortDescription:"酸菜鱼是一道很经典的菜",
+    picture:"https://www.haocai777.com/Article/UploadFiles2012c/201610/2016101009452231.jpg",
     score:"5"
   },{
     id:2,
     name:"油泼面",
     shortDescription:"简单又美味",
+    picture:"http://res.hoto.cn/5c52b37f0135db3ab01d5d5c.jpg!default",
     score:"5"
   },{
     id:3,
     name:"鱼香肉丝",
     shortDescription:"这道菜被家人和朋友称赞为“酒店级别”的",
+    picture:"https://ali.xinshipu.cn/20130321/original/1363853741335.jpg@288w_216h_50q_1e_1c.jpg",
     score:"5"
   },{
     id:4,
     name:"饺子",
     shortDescription:"代表家乡的美食",
+    picture:"http://5b0988e595225.cdn.sohucs.com/images/20180105/94d8c5e3763640159208dbde0c4cae5e.jpeg",
     score:"5"
   },{
     id:5,
     name:"糖醋里脊",
     shortDescription:"糖醋里脊，里脊肉外酥里嫩，吃起来酸甜可口",
+    picture:"http://5b0988e595225.cdn.sohucs.com/images/20180613/6db00ce2bf064319a3b52c2ad2ab5e76.jpeg",
     score:"5"
   },{
     id:6,
     name:"肉夹馍",
     shortDescription:"西安人的风味小吃",
+    picture:"https://ali.xinshipu.cn/20120516/original/1337154158537.jpg@288w_216h_99q_1e_1c.jpg",
     score:"5"
   },{
     id:7,
     name:"宫保鸡丁",
     shortDescription:"宫保鸡丁色泽赤红诱人，酸辣口",
+    picture:"https://ali.xinshipu.cn/20140823/original/1408782854509.jpg@288w_216h_99q_1e_1c.jpg",
     score:"5"
   },
 ]
 
-export const teach_food_data = [
+export const TEACH_FOOD_DATA = [
   {
     id:1,
     name:"酸菜鱼",

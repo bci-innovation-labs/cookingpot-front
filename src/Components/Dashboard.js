@@ -11,7 +11,7 @@ class FoodRecipeRows extends Component{
         elements.push(
           <tr key={row.id}>
               <td>
-                  <img src={row.pictureURL} alt={row.name} height="42" width="42" />
+                  <img src={row.picture} alt={row.name} height="42" width="42" />
               </td>
               <td>{row.name}</td>
               <td>{row.shortDescription}</td>

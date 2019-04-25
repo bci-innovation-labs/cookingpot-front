@@ -43,10 +43,6 @@ class DashboardContainer extends Component {
     }
 
     render() {
-        if (this.state.menuStatus) {
-            return <Redirect to='/topmenu' />
-        }
-
         return (
             <Dashboard
             state={this.state}

@@ -20,6 +20,7 @@ componentDidMount(){
           this.setState({
             foodDetail:data
           });
+
         },
         (error)=>{
         }

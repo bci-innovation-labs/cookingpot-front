@@ -9,6 +9,7 @@ import SideBarCollapse from "./SideBarCollapse";
 import RegisterSuccessContainer from "./RegisterSuccessContainer";
 import LogoutContainer from "./LogoutContainer";
 import ProfileContainer from "./ProfileContainer";
+import FoodDetailContainer from "./FoodDetailContainer";
 
 class AppContainer extends Component {
   render() {
@@ -22,6 +23,7 @@ class AppContainer extends Component {
            <Route path="/registersuccess" exact component={RegisterSuccessContainer} />
            <Route path="/Logout" exact component={LogoutContainer} />
            <Route path="/profile" exact component={ProfileContainer} />
+           <Route path="/food/:foodId" exact component={FoodDetailContainer} />
        </Router>
     );
   }

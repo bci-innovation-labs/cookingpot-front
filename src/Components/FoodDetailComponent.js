@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 class FoodDetailComponent extends Component{
   render(){
     const {foodDetail} = this.props;
+
     return(
       <div className="container-fluid">
           <div className="d-flex align-items-stretch">
@@ -39,8 +40,11 @@ class FoodDetailComponent extends Component{
                                   <th scope="row" className="bg-light">description</th>
                                   <td>{foodDetail.longDescription}</td>
                               </tr>
-
-
+                              <tr>
+                                  <td>
+                                  <img src={foodDetail.picture} alt={foodDetail.name} height="500" width="500" />
+                                  </td>
+                              </tr>
                               </tbody>
                           </table>
                           <div className="form-group col-md-12 mb-3 mx-auto text-center">
