@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import ContactUsComponent from '../Components/ContactUsComponent'
 
-class ContactUsContainer extends Container {
+class ContactUsContainer extends Component {
   render (){
     return(
       <ContactUsComponent />
@@ -9,4 +9,4 @@ class ContactUsContainer extends Container {
   }
 }
 
-export default ContactUsComponent;
+export default ContactUsContainer;
