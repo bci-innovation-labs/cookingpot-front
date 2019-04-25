@@ -5,11 +5,15 @@ import {Redirect} from 'react-router-dom'
 class ProfileContainer extends Component {
   constructor(props){
     super(props)
+
+    let userProfileString = localStorage.getItem('user');
+    let userProfileDictionary = JSON.parse(userProfileString);
+
     this.state = {
-      email:'',
+      email:userProfileDictionary.email,
       password:'',
-      firstname:'',
-      lastname:'',
+      firstname:userProfileDictionary.firstName,
+      lastname:userProfileDictionary.lastName,
       wasProfile:false
     }
 

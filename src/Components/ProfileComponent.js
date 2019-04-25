@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 
 class ProfileComponent extends Component {
   render(){
+    const {onProfileClick,onChange,email,firstname,lastname,password}=this.props;
     return(
       <div className="container-fluid">
           <div className="d-flex align-items-stretch">
@@ -10,7 +11,7 @@ class ProfileComponent extends Component {
 
                   <div className="col-md-5 mx-auto mt-2">
                       <h3 className="pt-4 pb-2 text-center">Profile Form</h3>
-                      <form id="residential-form" method="post" className="needs-validation" action="" noValidate>
+                      <form id="residential-form" className="needs-validation">
                           <p className="border-bottom mb-3 pb-1 text-secondary">Personal Details</p>
                           <div id="all-errors" className="alert alert-error fade show" role="alert">
                               <strong>There were errors during registration:</strong>
@@ -29,34 +30,28 @@ class ProfileComponent extends Component {
                           <div className="form-row">
                               <div className="form-group col-md-12 mb-4">
                                   <label htmlFor="firstname">First name</label>
-                                  <input type="text" className="form-control form-control-lg border border-primary" id="firstname"
+                                  <input value={firstname} onChange={onChange} type="text" className="form-control form-control-lg border border-primary" id="firstname"
                                       name="firstname" placeholder="First name" minLength="3" required />
                               </div>
                               <div className="form-group col-md-12 mb-4">
                                   <label htmlFor="lastname">Last name</label>
-                                  <input type="text" className="form-control form-control-lg border border-primary" id="lastname"
+                                  <input value={lastname} onChange={onChange} type="text" className="form-control form-control-lg border border-primary" id="lastname"
                                       name="lastname" placeholder="Last name" minLength="3" required />
                               </div>
                               <div className="form-group col-md-7 mb-4">
-                                  <label htmlFor="phonenumber">Phone</label>
-                                  <input type="text" className="form-control form-control-lg border border-primary"
-                                      id="phonenumber" name="phonenumber" placeholder="(xxx) xxx-xxxx" minLength="10"
-                                      maxLength="14" required />
-                              </div>
-                              <div className="form-group col-md-7 mb-4">
-                                  <label htmlFor="mobilenumber">Mobile (optional)</label>
-                                  <input type="text" className="form-control form-control-lg border border-success"
-                                      id="mobilenumber" name="mobilenumber" placeholder="(xxx) xxx-xxxx" minLength="10"
+                                  <label htmlFor="password">Password(optional)</label>
+                                  <input value= {password} onChange={onChange} type="text" className="form-control form-control-lg border border-success"
+                                      id="password" name="password" placeholder="password" minLength="10"
                                       maxLength="14" />
                               </div>
                               <div className="form-group col-md-12 mb-4">
                                   <label htmlFor="email">E-Mail (optional)</label>
-                                  <input type="email" className="form-control form-control-lg border border-success" id="email"
+                                  <input value={email} onChange={onChange} type="email" className="form-control form-control-lg border border-success" id="email"
                                       name="email" placeholder="Email Address" />
                               </div>
                           </div>
                           <div className="form-group col-md-12 mb-3 mx-auto text-center">
-                              <button className="btn btn-success btn-lg btn-fxw mt-4" type="submit">
+                              <button onClick={onProfileClick} className="btn btn-success btn-lg btn-fxw mt-4" type="submit">
                                   <i className="fas fa-check"></i>&nbsp;
                                   Save
                               </button>
