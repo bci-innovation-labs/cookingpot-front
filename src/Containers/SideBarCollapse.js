@@ -7,6 +7,9 @@ const authMenuData = [
         title: "Dashboard",
         url: "/dashboard"
     },{
+        title: "Profile",
+        url: "/profile"
+    },{
         title:"Logout",
         url:"Logout"
     },

@@ -8,7 +8,7 @@ import FoodSearchContainer from "./FoodSearchContainer";
 import SideBarCollapse from "./SideBarCollapse";
 import RegisterSuccessContainer from "./RegisterSuccessContainer";
 import LogoutContainer from "./LogoutContainer";
-import FoodDetailContainer from "./FoodDetailContainer";
+import ProfileContainer from "./ProfileContainer";
 
 class AppContainer extends Component {
   render() {
@@ -21,8 +21,7 @@ class AppContainer extends Component {
            <Route path="/food-search" exact component={FoodSearchContainer} />
            <Route path="/registersuccess" exact component={RegisterSuccessContainer} />
            <Route path="/Logout" exact component={LogoutContainer} />
-           <Route path='/food/:foodId' exact component={FoodDetailContainer} />
-
+           <Route path="/profile" exact component={ProfileContainer} />
        </Router>
     );
   }
