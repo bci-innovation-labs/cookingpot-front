@@ -28,7 +28,13 @@ const authMenuData = [
       },{
           title:"Contact Us",
           url:"/contact"
-      },
+      },{
+          title:"Terms of Service",
+          url:"/terms"
+      },{
+          title:"Privacy Policy",
+          url:"/privacy"
+      }
 
     ]
 
