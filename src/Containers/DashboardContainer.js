@@ -33,7 +33,6 @@ class DashboardContainer extends Component {
           null,
           {},
           (data) =>{
-            console.log(data)
             this.setState({
               foodRecipesData:data
             })

@@ -16,7 +16,11 @@ class FoodRecipeRows extends Component{
               <td>{row.name}</td>
               <td>{row.shortDescription}</td>
               <td>{row.score}/5</td>
-              <td>view <i className="fa fa-chevron-right color-blue"></i></td>
+              <td>
+              <Link to={`/food/${row.id}`}>
+              view <i className="fa fa-chevron-right color-blue"></i>
+              </Link>
+              </td>
           </tr>
         )
       }
