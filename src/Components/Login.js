@@ -24,7 +24,7 @@ class Login extends Component {
                       <div className="row">
                           <div className="col-sm-6 mx-auto">
                               <h2 className="text-center mb-3">Sign In</h2>
-                              <form id="sign-in" className="form-signin needs-validation" method="post" action="" noValidate>
+                              <form id="sign-in" className="form-signin needs-validation"  noValidate>
 
                                   <div className="input-group input-group-lg">
                                       <div className="input-group-prepend">

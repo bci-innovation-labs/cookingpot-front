@@ -27,14 +27,23 @@ onChange(event){
   })
 }
 onProfileClick(){
+  const userProfile = {
+    firstName:this.state.firstname,
+    lastName:this.state.lastname,
+    email:this.state.email,
+    password:this.state.password
+  }
+
+
+  localStorage.setItem("user", JSON.stringify(userProfile));
   this.setState({
     wasProfile:true
   })
 }
 
   render(){
-    if (this.state.wasProfiled){
-      return <Redirect to="/resgistersuccess" />
+    if (this.state.wasProfile){
+      return <Redirect to="/dashboard" />
     }
     return(
   <ProfileComponent
