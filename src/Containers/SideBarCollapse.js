@@ -117,8 +117,7 @@ class SideBarCollapse extends React.Component {
     <div>
         <header className="top-navbar navbar navbar-dark fixed-top bg-dark justify-content-between">
             <Link className="navbar-brand" to="#">Cooking Pot</Link>
-
-
+          
             <ul className="navbar-nav flex-row">
 
                 <li className="nav-item">

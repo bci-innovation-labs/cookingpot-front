@@ -40,6 +40,14 @@ class Dashboard extends Component {
               <div className="d-flex align-items-stretch">
                   <main id="main" role="main">
                       <h1>Top weekly Menu</h1>
+
+                          <form className="form-inline search-form ml-0 my-2 my-lg-0 float-right">
+                              <input className="form-control search-box mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                              <button className="nav-link search-button" type="button">
+                                  <i className="fas fa-search"></i>
+                              </button>
+                          </form>
+
                       <div className="col-sm-12 mx-auto mt-4 pt-4">
                           <h2>Recent Clients</h2>
                           <div className="table-responsive">
