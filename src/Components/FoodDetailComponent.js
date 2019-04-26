@@ -41,9 +41,13 @@ class FoodDetailComponent extends Component{
                                   <td>{foodDetail.longDescription}</td>
                               </tr>
                               <tr>
-                                  <td>
+                                  <th scope="row" className="bg-light">
                                   <img src={foodDetail.picture} alt={foodDetail.name} height="500" width="500" />
+                                  </th>
+                                  <td>
+                                  {foodDetail.ingredients}
                                   </td>
+
                               </tr>
                               </tbody>
                           </table>

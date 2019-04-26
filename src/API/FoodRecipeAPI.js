@@ -8,6 +8,7 @@ let foodRecipesDetail = TEACH_FOOD_DATA;
 
 
 export function getFoodRecipies(Search=null,filter={}, okCallback, badCallback){
+  console.log("search")
   okCallback(foodRecipesData);
 }
 

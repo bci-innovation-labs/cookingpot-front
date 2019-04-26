@@ -35,7 +35,7 @@ export const MENU_FOOD_DATA=[
     id:1,
     name:"酸菜鱼",
     shortDescription:"酸菜鱼是一道很经典的菜",
-    picture:"https://www.haocai777.com/Article/UploadFiles2012c/201610/2016101009452231.jpg",
+    picture:"http://ali.xinshipu.cn/20140301/original/1393660296317.jpg",
     score:"5"
   },{
     id:2,
@@ -80,7 +80,7 @@ export const TEACH_FOOD_DATA = [
   {
     id:1,
     name:"酸菜鱼",
-    picture:"https://www.haocai777.com/Article/UploadFiles2012c/201610/2016101009452231.jpg",
+    picture:"http://ali.xinshipu.cn/20140301/original/1393660296317.jpg",
     longDescription:"酸菜鱼是一道很经典的菜，酸辣爽口，鱼片滑嫩",
     ingredients:["黑鱼","酸菜"],
     step:["1. 鱼洗净去头。用刀从脊背处处理成两片",
