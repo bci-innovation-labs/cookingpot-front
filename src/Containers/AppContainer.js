@@ -8,7 +8,6 @@ import PrivacyContainer from "./PrivacyContainer";
 import LoginContainer from "./LoginContainer";
 import DashboardContainer from "./DashboardContainer";
 import RegisterContainer from "./RegisterContainer";
-import FoodSearchContainer from "./FoodSearchContainer";
 import SideBarCollapse from "./SideBarCollapse";
 import RegisterSuccessContainer from "./RegisterSuccessContainer";
 import LogoutContainer from "./LogoutContainer";
@@ -28,7 +27,6 @@ class AppContainer extends Component {
            <Route path="/contact" exact component={ContactUsContainer} />
            <Route path="/privacy" exact component={PrivacyContainer} />
            <Route path="/terms" exact component={TermsContainer} />
-           <Route path="/food-search" exact component={FoodSearchContainer} />
            <Route path="/registersuccess" exact component={RegisterSuccessContainer} />
            <Route path="/Logout" exact component={LogoutContainer} />
            <Route path="/profile" exact component={ProfileContainer} />

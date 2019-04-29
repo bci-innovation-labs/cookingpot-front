@@ -2,10 +2,13 @@ import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 
 class FoodDetailComponent extends Component{
+
+
   render(){
     const {foodDetail} = this.props;
 
     return(
+
       <div className="container-fluid">
           <div className="d-flex align-items-stretch">
               <main id="main" role="main">
@@ -26,6 +29,8 @@ class FoodDetailComponent extends Component{
                   <h1>Food Detail</h1>
                   <div className="row mt-4 pt-3 mb-4 pb-2">
                       <div className="col-md-10 mx-auto p-2">
+
+
                           <table className="table table-bordered custom-cell-w">
                               <tbody>
                               <tr className="bg-dark">
@@ -45,9 +50,13 @@ class FoodDetailComponent extends Component{
                                   <img src={foodDetail.picture} alt={foodDetail.name} height="500" width="500" />
                                   </th>
                                   <td>
-                                  {foodDetail.ingredients}
+                                   {foodDetail.ingredients}
+                                   {foodDetail.step}
                                   </td>
-
+                              </tr>
+                              <tr>
+                                  <th>tips</th>
+                                  <td>{foodDetail.tips}</td>
                               </tr>
                               </tbody>
                           </table>

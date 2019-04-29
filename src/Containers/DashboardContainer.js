@@ -15,9 +15,12 @@ class DashboardContainer extends Component {
             userEmail: localStorage.getItem("userEmail"),
             userName:localStorage.getItem("userName"),
             menuStatus:false,
-            foodRecipesData:[]
+            foodRecipesData:[],
+            searchTerm:'',
         }
         this.onMenuClick=this.onMenuClick.bind(this);
+        this.onChange=this.onChange.bind(this);
+        this.onDismiss=this.onDismiss.bind(this);
     }
     onMenuClick(){
       this.setState({
@@ -28,6 +31,15 @@ class DashboardContainer extends Component {
 
     }
 
+    onDismiss(id) {
+          const isNotId = foodRecipesData => foodRecipesData.id !== id;
+          const updatedList = this.state.foodRecipesData.filter(isNotId);
+          this.setState({ foodRecipesData: updatedList });
+          }
+
+    onChange(event) {
+          this.setState({ searchTerm: event.target.value });
+          }
     componentDidMount(){
         getFoodRecipies(
           null,
@@ -52,6 +64,9 @@ class DashboardContainer extends Component {
             state={this.state}
             onMenuClick={this.onMenuClick}
             data={this.state.foodRecipesData}
+            onChange={this.onChange}
+            onDismiss={this.onDismiss}
+            searchTerm={this.state.searchTerm}
              />
         )
     }

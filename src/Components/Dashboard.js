@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 class FoodRecipeRows extends Component{
   render(){
-    const { onMenuClick, data } = this.props;
+    const { onMenuClick, data,searchTerm,onChange,onDismiss } = this.props;
       let elements = [];
       for(let i = 0; i< data.length; i++){
         let row = data[i];
@@ -34,19 +34,28 @@ class Dashboard extends Component {
         this.state= this.props.state;
     }
     render() {
-      const { onMenuClick, data } = this.props;
+      const { onMenuClick, data,searchTerm,onChange,onDismiss } = this.props;
         return (
           <div className="container-fluid">
               <div className="d-flex align-items-stretch">
                   <main id="main" role="main">
                       <h1>Top weekly Menu</h1>
-
-                          <form className="form-inline search-form ml-0 my-2 my-lg-0 float-right">
-                              <input className="form-control search-box mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                              <button className="nav-link search-button" type="button">
-                                  <i className="fas fa-search"></i>
-                              </button>
-                          </form>
+                      <form className="form-inline search-form ml-0 my-2 my-lg-0 float-right">
+                          <input className="form-control search-box mr-sm-2"
+                           type="search"
+                          placeholder="Search"
+                          aria-label="Search"
+                          value={searchTerm}
+                          onchange={this.onChange}
+                           />
+                          <button
+                          className="nav-link search-button"
+                          type="button"
+                          onClick={() => this.onDismiss(data.id)}
+                          >
+                              <i className="fas fa-search"></i>
+                          </button>
+                      </form>
 
                       <div className="col-sm-12 mx-auto mt-4 pt-4">
                           <h2>Recent Clients</h2>
